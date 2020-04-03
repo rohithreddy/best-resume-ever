@@ -39,6 +39,10 @@ function getVueOptions (name) {
                     links.github = `https://github.com/${this.person.contact.github}`;
                 }
 
+                if(this.person.contact.website) {
+                    links.website = `https://${this.person.contact.website}`;
+                }
+
                 if(this.person.contact.codefights) {
                     links.codefights = `https://codefights.com/profile/${this.person.contact.codefights}`;
                 }

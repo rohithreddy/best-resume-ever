@@ -1,0 +1,114 @@
+/* #*/ export const PERSON = `
+name:
+  first: Rohith
+  middle:
+  last: Reddy
+about: A Programmer with 4+ years of experience in building Data Intensive Applications that are simple and functional, tackling challenging architectural and scalability problems. In my free time I am either hacking Linux kernel or building embedded IoT devices.
+position: Software Programmer
+
+
+experience:
+- company: Sphota Biz
+  position: Member of Technical Staff
+  timeperiod: September 2018 - August 2019
+  description: <ul>
+               <li>Led efforts in building services for a Multi-touch Attribution product, implemented api's to ingest, process the touch point data, push it to customer data stores, setup auto-scaling with Load Balancer, few tools used were Falcon framework, Google Cloud PubSub, GCF, Storage, Scheduler</li>
+               <li>Worked with clients to build a BI system on Metabase & data warehouse on Postgres enabling the marketeers to take better decisions on ad spends</li>
+               <li>Modified client's internal data platform for compliance with GDPR data laws relating to PII had to work with React and NodeJS</li>
+               </ul>
+
+- company: N!yo
+  position: Data Engineer
+  timeperiod: June 2017 - April 2018
+  description:  Niyo is a new age bank, has a multi-wallet credit & debit card, forex card products <ul>
+               <li>Designed and built a data pipeline to move data from MongoDB which is the transactional system to a warehouse on AWS Redshift using Airflow, we leaned towards ELT than ETL reducing costs</li>
+               <li>Setup Kafka cluster and used debezium to stream change logs from various services for stream processing and have continuous snapshots of data state</li>
+               <li>Collaborated with analysts, developers and CXO's to establish various metrics, reports, KPIs and insights. Implemented a BI system with Metabase & SQL acting as frontend on Redshift democratizing data and having a near realtime view of the business</li>
+               <li>Curated various reports, analysis and data access, educated users who included analysts, engineers,customer support executives, investors and other business users in using these tools while being compliant, resulting in faster recovery of dues from clients, </li>
+               <li>Detected significant anomalies in transaction data that directly resulted in preventing loss of money & helped us in establishing SLAs with partners</li>
+               <li>Implemented Sanity & Data Quality Checks to verify data received from various partners. Automated various data related tasks such as sharing data with partners</li>
+               </ul>
+
+- company: RedBlackTree
+  position: Serverside IOT Engineer
+  timeperiod: October 2016 - February 2017
+  description: <ul> 
+               <li>Was part of the initial team building Preventative Maintenance solution using predictive analytics with Machine Learning. Assisted the CTO and a senior developer in design of the system and data modelling for processing data from a variety of sources ranging from sensor events to textual data from service technicians</li>
+               <li>Built data ingestion pipeline from external client systems & databases to S3 using Pandas & python</li>
+               <li>Suggested that we refactor our services being built using Java Jersey and Postgres as main source for event data to a Druid Based System to reduce latency since queries involved conditions on a large number of dimensions</li>
+               <li>Led efforts in rewriting the services to ingest data to Druid and restful api's for consumption of data from the frontend web application and machine learning modules. we used Pandas, Flask and Postgres for metadata & user management while Druid was the main source for queries related to events, this rewrite helped in bringing down response times to sub-second from the usual timeouts</li>
+               </ul>
+
+- company: Customer Centria
+  position: Full-stack Developer
+  timeperiod: July 2015 - August 2016
+  description: <ul>
+               <li>Created campaign analytics dashboard in Backbone.js Single Page Application, integrating d3.js and nvd3.js libraries into the Omni-channel Campaign management SaaS product, wrote REST API's for aggregating statistics from campaigns with Spring and MongoDB</li>
+               <li>Used Jenkins to create a CI / CD pipeline and automated reliable deployments</li>
+               <li>Proposed and managed a Mesos cluster for running applications and data workloads, increasing developer productivity making deployments more resilient and manageable</li>
+               <li>Implemented a resilient pipeline and services for a customer 360 data application to capture tweets based on keywords related to clients & perform sentiment analysis with help from data scientists, senior developers. Used Kafka, Python, MongoDB running on the Mesos Cluster</li>
+               </ul>
+
+
+- company: Freelance
+  position: Developer
+  timeperiod: Since August 2016
+  description: <ul>
+               <li>KNOLSKAPE.com - Worked on porting data pipeline from AWS Lambda to Airflow running on GKE to improve the scalability</li>
+               <li>MYALLY.ai - Data Pipeline using ElasticSearch and Fluentd which helped uncover insights on user behavior, and Frontend modules in the React SPA</li>
+               <li>SENSFORTH.ai - Java Services using Spark MLlib, Jersey to classify incoming emails to customer service and route them to relevant teams for a reputed bank, bringing down time taken for the first response to complaints by 25% </li>
+               <li>MELVAULT.com - Implemented API services and Frontend using JavaScript for a home automation project on a proprietary grid computing platform</li></ul>
+
+
+education:
+- degree: Master of Science
+  timeperiod: August 2009 - March 2015
+  description: Major in Physics with Honors, BITS Pilani University, India
+
+#skill level goes 0 to 100
+skills:
+- name: Python
+  level: 99
+- name: Druid
+- name: Shell
+- name: MongoDB
+  level: 93
+- name: SQL
+  level: 60
+- name: Kubernetes
+  level: 95
+- name: Docker
+  level: 99
+- name: Streamsets
+  level: 80
+- name: Kafka
+knowledge: 
+
+projects:
+- name: best-resume-ever
+  platform: Vue
+  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
+  url: https://github.com/salomonelli/best-resume-ever
+
+hobbies:
+- name: Video Games
+  iconClass: fa fa-gamepad
+  url: https://example.com
+
+- name: Drawing
+  iconClass: fa fa-pencil
+  url: https://example.com
+
+contributions:
+- name: best-resume-ever
+  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
+  url: https://github.com/salomonelli/best-resume-ever
+
+contact:
+  email: rohithreddyt@yandex.com
+  phone: +91 888 654 0155
+  github: rohithreddy
+  website: rohithreddy.github.io
+# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
+lang: en
+`

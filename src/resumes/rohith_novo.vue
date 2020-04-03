@@ -67,16 +67,22 @@
 import Vue from 'vue';
 import { getVueOptions } from './options';
 
-const name = 'purple';
+const name = 'rohith_novo'; // TODO change name
 export default Vue.component(name, getVueOptions(name));
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+// <style lang="less" scoped>
+// </style>
+
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 @text-purple: #680568;
 #template {
     box-sizing:border-box;
-    font-family:'Open Sans', sans-serif;
+    font-family:'Noto Sans', sans-serif;
     h1, h2 {
         /*font-family:'Open Sans Condensed', sans-serif;*/
         margin:0;
@@ -94,7 +100,7 @@ export default Vue.component(name, getVueOptions(name));
     }
 
     a {
-        color:@text-purple;
+        color:#FFF;
         text-decoration:none;
     }
 
@@ -103,10 +109,10 @@ export default Vue.component(name, getVueOptions(name));
     }
 
     #resume-header {
-        color: @text-purple;
+        color: white;
         height: 136px;
-        background-color: white;
-        box-shadow: inset 0px 0px 200px white;
+        background-color: purple;
+        box-shadow: inset 0px 0px 200px #301030;
         padding: 40px 100px 25px;
 
         #header-left {
@@ -115,13 +121,13 @@ export default Vue.component(name, getVueOptions(name));
             float: left;
             h1 {
                 font-size:56px;
-                color:purple;
+                color:white;
                 text-transform:uppercase;
                 line-height:56px;
             }
             h2 {
                 font-size:22px;
-                color:purple;
+                color:white;
             }
             #info-flex {
                 display:flex;
@@ -211,14 +217,14 @@ export default Vue.component(name, getVueOptions(name));
     #resume-footer {
         padding: 20px 100px;
         height: 135px;
-        background-color: white;
-        box-shadow: inset 0px 0px 100px white;
+        background-color: purple;
+        box-shadow: inset 0px 0px 100px #301030;
         box-sizing: border-box;
         position: absolute;
         bottom: 0px;
         width: 100%;
         h2, p {
-            color:@text-purple;
+            color:white;
         }
     }
 

@@ -71,6 +71,14 @@
       </router-link>
     </div>
     <div class="preview">
+      <router-link v-bind:to="'/resume/rohith_novo'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-creative.png" />
+          <span>creative</span>
+        </div>
+      </router-link>
+    </div>
+    <div class="preview">
       <router-link v-bind:to="'/resume/cool'">
         <div class="preview-wrapper">
           <img src="../assets/preview/resume-cool.png" />
@@ -91,7 +99,7 @@ export default Vue.component('resume', {
 
 <style scoped>
 .home {
-  font-family: 'Roboto' !important;
+  font-family: 'Noto Sans' !important;
 }
 
 .logo {

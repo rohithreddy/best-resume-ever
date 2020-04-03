@@ -7,42 +7,54 @@
           <span class="person-position">
             {{person.position}}
           </span>
+          <div id="info-flex">
+                <span id="email"><a :href='"mailto:" + person.contact.email'>
+                  <i class="fa fa-envelope" aria-hidden="true"></i> {{person.contact.email}}</a></span>
+                <span id="phone"><i class='fa fa-phone-square' aria-hidden="true"></i> {{person.contact.phone}}</span>
+                <span v-if="person.contact.website" id="website"><a :href='contactLinks.website'><i class="fa fa-home" aria-hidden="true"></i> {{person.contact.website}}</a></span>
+                <span v-if="person.contact.github" id="github"><a :href='contactLinks.github'><i class="fa fa-github" aria-hidden="true"></i> {{person.contact.github}}</a></span>
+      </div>
       </div>
       <div class="left-col">
           <div class="person-image">
               <div class="image-centerer">
-                  <div class="img"></div>
+                <div v-if="person.about">
+            <h2>{{ lang.about }}</h2>
+            <p>{{person.about}}</p>
+        </div>
+                  <!-- <div class="img"></div> -->
               </div>
           </div>
-          <div class="contact">
-              <h3>{{ lang.contact }}</h3>
-              <div class="contact-row">
-                  <a :href="contactLinks.email">{{person.contact.email}}</a>
+        <div class="skills-block">
+              <h3>{{ lang.skills }}</h3>
+              <div class="skills">
+                      <div class="skill" v-for="skill in person.skills" :key="skill.name">
+                          <span class="skill-name">{{skill.name}}</span>
+                      </div>
               </div>
-              <div class="contact-row dots">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-              </div>
-              <div class="contact-row">
-                  <a :href="contactLinks.phone">{{person.contact.phone}}</a>
-              </div>
-              <div class="contact-row dots">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-              </div>
-              <div class="contact-row">
-                  {{person.contact.street}} <br> {{person.contact.city}}
-              </div>
-              <div v-if="person.contact.github" class="contact-row dots">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-              </div>
-              <div v-if="person.contact.github" class="contact-row">
-                  <a :href="contactLinks.github">{{contactLinks.github}}</a>
-              </div>
+              <span class="skills-other"> {{person.knowledge}} </span>
+          </div>
+          <div class="education">
+              <h3>{{ lang.education }}</h3>
+                  <div class="education-block" v-for="education in person.education" :key="education.degree">
+                      <div class="row">
+                          <span class="degree">{{education.degree}}</span>
+                      </div>
+                      <div class="row">
+                          <span class="degree-description">{{education.description}}</span>
+                      </div>
+                  </div>
+          </div>
+          <div class="freelanceexperience">
+              <h3>{{ lang.freelanceexperience }}</h3>
+                  <div class="freelance-experience-block" v-for="experience in person.freelanceexperience" :key="experience.company">
+                      <div class="row">
+                          <span class="company"> {{experience.company}}</span>
+                      </div>
+                      <div class="row">
+                          <span class="job-description" v-html="experience.description"> </span>
+                      </div>
+                  </div>
           </div>
       </div>
       <div class="right-col">
@@ -57,34 +69,13 @@
                           <span class="time-period"> {{experience.timeperiod}}</span>
                       </div>
                       <div class="row">
-                          <span class="job-description"> {{experience.description}} </span>
+                          <span class="job-description" v-html="experience.description"> </span>
                       </div>
                   </div>
-          </div>
-          <div class="education">
-              <h3>{{ lang.education }}</h3>
-                  <div class="education-block" v-for="education in person.education" :key="education.degree">
-                      <div class="row">
-                          <span class="degree">{{education.degree}}</span>
-                      </div>
-                      <div class="row">
-                          <span class="degree-description">{{education.description}}</span>
-                      </div>
-                  </div>
-          </div>
-          <div class="skills-block">
-              <h3>{{ lang.skills }}</h3>
-              <div class="skills">
-                      <div class="skill" v-for="skill in person.skills" :key="skill.name">
-                          <span class="skill-name">{{skill.name}}</span>
-                      </div>
-              </div>
-              <span class="skills-other"> {{person.knowledge}} </span>
           </div>
       </div>
   </div>
 
-  </div>
 </template>
 
 <script>
@@ -112,8 +103,8 @@ export default Vue.component(name, getVueOptions(name));
   }
   .top-row {
     width:100%;
-    padding-top:100px;
-    padding-bottom:100px;
+    padding-top:80px;
+    padding-bottom:80px;
     span {
       width:100%;
       display:block;
@@ -128,6 +119,22 @@ export default Vue.component(name, getVueOptions(name));
     span.person-position {
       letter-spacing:5px;
     }
+  }
+  .top-row #info-flex {
+
+                display:flex;
+                margin-top:40px;
+                font-size:12px;
+                a {
+        color:black;
+      }
+                span {
+                    margin-right:0px;
+                }
+                i {
+                    margin-right:5px;
+                }
+
   }
   .left-col {
     width:26%;
@@ -146,6 +153,36 @@ export default Vue.component(name, getVueOptions(name));
         background-size:cover;
         height:250px;
         width:100%;
+      }
+    }
+    .skills-block {
+      margin-top:60px;
+    }
+    .education {
+      margin-top:60px;
+      .education-block {
+        margin-bottom:10px;
+        .degree {
+          font-size:19px;
+          text-transform:uppercase;
+          margin-bottom:3px;
+        }
+      }
+    }
+    .freelanceexperience{
+      margin-top: 60px;
+    }
+    .freelance-experience-block {
+      margin-bottom:10px;
+      .row:first-child {
+        margin-bottom:3px;
+      }
+      .row .company {
+        text-transform:uppercase;
+        font-size:19px;
+      }
+      .row .job-description {
+        margin-top: 10px
       }
     }
     .contact h3 {
@@ -188,17 +225,6 @@ export default Vue.component(name, getVueOptions(name));
         font-size:19px;
       }
     }
-    .education {
-      margin-top:50px;
-      .education-block {
-        margin-bottom:10px;
-        .degree {
-          font-size:19px;
-          text-transform:uppercase;
-          margin-bottom:3px;
-        }
-      }
-    }
     .skills-block {
       margin-top:50px;
       position:relative;
@@ -231,6 +257,18 @@ export default Vue.component(name, getVueOptions(name));
           width:100%;
           margin-top:20px;
         }
+        #info-flex {
+                display:flex;
+                margin-top:20px;
+                font-size:14px;
+
+                span {
+                    margin-right:25px;
+                }
+                i {
+                    margin-right:5px;
+                }
+            }
       }
     }
   }

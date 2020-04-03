@@ -4,6 +4,7 @@ const lang = {
     born: 'Born',
     bornIn: 'in',
     experience: 'Experience',
+    freelanceexperience: 'Freelance Projects',
     education: 'Education',
     skills: 'Skills',
     projects: 'Projects',

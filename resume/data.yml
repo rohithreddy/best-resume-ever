@@ -1,64 +1,86 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
+  first: Rohith
   middle:
-  last: Doe
-about: Hi, my name is John Doe. I"m just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+  last: Reddy
+about: A Programmer with 4+ years of experience in building Data Intensive Applications that are simple and functional, tackling challenging architectural and scalability problems. In my free time I am either hacking Linux kernel or building embedded IoT devices.
+position: Software Programmer
 
-birth:
-  year: 1990
-  location: New York
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
-  website: https://example.com
+- company: N!yo
+  position: Data Engineer
+  timeperiod: June 2017 - April 2018
+  description:  Niyo is a new age bank, has a multi-wallet credit & debit card, forex card products <ul>
+               <li>Designed and built a data pipeline to move data from MongoDB which is the transactional system to a warehouse on AWS Redshift using Airflow, we leaned towards ELT than ETL reducing costs</li>
+               <li>Collaborated with analysts, developers and CXO's to establish various metrics, reports, KPIs and insights. Implemented a BI system with Metabase & SQL acting as frontend on Redshift democratizing data and having a near realtime view of the business</li>
+               <li>Curated various reports, dashboards, access to data, educated users who included analysts, engineers,customer support executives, investors and other business users in using these tools while being compliant, making the organization more data driven</li>
+               <li>Implemented Sanity & Data Quality Checks to verify data received from various partners. Automated various data related tasks such as sharing data with partners</li>
+               <li>Detected significant anomalies with data quality checks for transaction data that directly resulted in finding and fixing bug on partner's switch, preventing loss of revenue & helping us in establishing SLAs with the partner</li>
+               <li>Setup Kafka cluster and used debezium to stream change logs from various services for stream processing and have continuous snapshots of data state</li>
+               </ul>
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
+- company: RedBlackTree
+  position: Serverside IOT Engineer
+  timeperiod: October 2016 - February 2017
+  description: <ul> 
+               <li>Was part of the initial team building Preventative Maintenance solution using predictive analytics with Machine Learning. Assisted the CTO and a senior developer in design of the system and data modelling for processing data from a variety of sources ranging from sensor events to textual data from service technicians, suggested using a columnar databases like Druid for event related data, which helped us in keeping our query latencies to sub-second</li>
+               <li>Built data ingestion pipeline from external client systems & databases to datalake on S3 using Pandas & python</li>
+               <li>Wrote services to ingest data to Druid from s3 and restful api's required for a custom web application and machine learning modules, used Flask & Pandas for api's, Postgres for application metadata</li>
+               </ul>
 
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+- company: Sphota Biz
+  position: Member of Technical Staff
+  timeperiod: September 2018 - August 2019
+  description: <ul>
+               <li>Led efforts in building services for a Multi-touch Attribution product, implemented api's to ingest, process the touch point data, push it to customer data stores, setup auto-scaling with Load Balancer to better handle load, few tools used were Falcon framework, Google Cloud PubSub, GCF, Storage, Scheduler</li>
+               <li>Worked with clients to build a BI system on Metabase & data warehouse on Postgres with Airflow enabling the marketeers to take better decisions on ad spends</li>
+               <li>Modified client's internal data platform for compliance with GDPR data laws relating to PII had to work with React and NodeJS</li>
+               </ul>
+
+- company: Customer Centria
+  position: Full-stack Developer
+  timeperiod: July 2015 - August 2016
+  description: <ul>
+               <li>Created campaign analytics dashboard in Backbone.js Single Page Application, integrating d3.js and nvd3.js libraries into Omni-channel Campaign management SaaS product, wrote REST API's for aggregating statistics from campaigns with Spring and MongoDB</li>
+               <li>Used Jenkins to create a CI / CD pipeline and automated reliable deployments</li>
+               <li>Proposed and managed a Mesos cluster for running applications and data workloads, increasing developer productivity making deployments more resilient and manageable</li>
+               <li>Implemented a resilient pipeline to capture tweets based on keywords related to clients & perform sentiment analysis for a customer 360 data application with help from data scientists, senior developers. Used Kafka, Python, MongoDB running on the Mesos Cluster</li>
+               </ul>
+
+freelanceexperience:
+- company: KNOLSKAPE.com
+  description: Worked on porting data pipeline from AWS Lambda to Airflow running on GKE to improve the scalability
+- company: MYALLY.ai
+  description: Implemented Data Pipeline using ElasticSearch and Fluentd which helped uncover insights on user behavior, and Frontend modules in the React SPA
+- company: SENSFORTH.ai
+  description: Java Services using Spark MLlib, Jersey to classify incoming emails to customer service and route them to relevant teams for a reputed bank, bringing down time taken for the first response to complaints by 25%
+- company: MELVAULT.com
+  description: Implemented API services and Frontend using JavaScript for a home automation project on a proprietary grid computing platform
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
+- degree: Master of Science
+  timeperiod: August 2009 - March 2015
+  description: Major in Physics with Honors, BITS Pilani University, India
 
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
-
-# skill level goes 0 to 100
+#skill level goes 0 to 100
 skills:
-- name: HTML5
+- name: Python
   level: 99
-- name: CSS3
-  level: 95
-- name: JavaScript
-  level: 97
-- name: Node.js
+- name: Druid
+- name: Shell
+- name: MongoDB
   level: 93
-- name: Angular 2
+- name: SQL
   level: 60
-- name: TypeScript
-  level: 80
-- name: ES.Next
-  level: 70
+- name: Spark
+  level: 95
 - name: Docker
   level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+- name: Streamsets
+  level: 80
+- name: Kafka
+knowledge: 
 
 projects:
 - name: best-resume-ever
@@ -81,12 +103,10 @@ contributions:
   url: https://github.com/salomonelli/best-resume-ever
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  email: rohithreddyt@yandex.com
+  phone: +91 888 654 0155
+  github: rohithreddy
+  website: rohithreddy.github.io
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
 lang: en
 `
