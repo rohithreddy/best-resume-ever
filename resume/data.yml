@@ -4,106 +4,77 @@ name:
   middle:
   last: Reddy
 about: A Programmer with 4+ years of experience in building Data Intensive Applications that are simple and functional, tackling challenging architectural and scalability problems. In my free time I am either hacking Linux kernel or building embedded IoT devices.
-position: Software Programmer
+# position: Software Programmer
+
+computer_skills:
+- type: Languages
+  list: Python, Javascript, Java
+- type: Frameworks
+  list: Flask, Falcon, Pandas, Backbone.js, Airflow, Spring, Spark, Kafka, Chalice, Selenium, Dask
+- type: Databases
+  list: MySQL, PostgreSQL, MongoDB, Druid, DynamoDB, Redshift
+- type: Dev tools
+  list: Git, Nginx, Shell, Intellij, VS Code, Docker, AWS CDK
+- type: Hosting
+  list: AWS, GCP
+
 
 
 experience:
-- company: N!yo
+- company: Sphota
+  position: Member of Technical Staff
+  timeperiod: Sep 2018 - Aug 2019
+
+- company: Niyo
   position: Data Engineer
-  timeperiod: June 2017 - April 2018
-  description:  Niyo is a new age bank, has a multi-wallet credit & debit card, forex card products <ul>
-               <li>Designed and built a data pipeline to move data from MongoDB which is the transactional system to a warehouse on AWS Redshift using Airflow, we leaned towards ELT than ETL reducing costs</li>
-               <li>Collaborated with analysts, developers and CXO's to establish various metrics, reports, KPIs and insights. Implemented a BI system with Metabase & SQL acting as frontend on Redshift democratizing data and having a near realtime view of the business</li>
-               <li>Curated various reports, dashboards, access to data, educated users who included analysts, engineers,customer support executives, investors and other business users in using these tools while being compliant, making the organization more data driven</li>
-               <li>Implemented Sanity & Data Quality Checks to verify data received from various partners. Automated various data related tasks such as sharing data with partners</li>
-               <li>Detected significant anomalies with data quality checks for transaction data that directly resulted in finding and fixing bug on partner's switch, preventing loss of revenue & helping us in establishing SLAs with the partner</li>
-               <li>Setup Kafka cluster and used debezium to stream change logs from various services for stream processing and have continuous snapshots of data state</li>
-               </ul>
+  timeperiod: Jun 2017 - Apr 2018
 
 - company: RedBlackTree
   position: Serverside IOT Engineer
-  timeperiod: October 2016 - February 2017
-  description: <ul> 
-               <li>Was part of the initial team building Preventative Maintenance solution using predictive analytics with Machine Learning. Assisted the CTO and a senior developer in design of the system and data modelling for processing data from a variety of sources ranging from sensor events to textual data from service technicians, suggested using a columnar databases like Druid for event related data, which helped us in keeping our query latencies to sub-second</li>
-               <li>Built data ingestion pipeline from external client systems & databases to datalake on S3 using Pandas & python</li>
-               <li>Wrote services to ingest data to Druid from s3 and restful api's required for a custom web application and machine learning modules, used Flask & Pandas for api's, Postgres for application metadata</li>
-               </ul>
-
-- company: Sphota Biz
-  position: Member of Technical Staff
-  timeperiod: September 2018 - August 2019
-  description: <ul>
-               <li>Led efforts in building services for a Multi-touch Attribution product, implemented api's to ingest, process the touch point data, push it to customer data stores, setup auto-scaling with Load Balancer to better handle load, few tools used were Falcon framework, Google Cloud PubSub, GCF, Storage, Scheduler</li>
-               <li>Worked with clients to build a BI system on Metabase & data warehouse on Postgres with Airflow enabling the marketeers to take better decisions on ad spends</li>
-               <li>Modified client's internal data platform for compliance with GDPR data laws relating to PII had to work with React and NodeJS</li>
-               </ul>
-
+  timeperiod: Oct 2016 - Feb 2017
+  
 - company: Customer Centria
-  position: Full-stack Developer
-  timeperiod: July 2015 - August 2016
-  description: <ul>
-               <li>Created campaign analytics dashboard in Backbone.js Single Page Application, integrating d3.js and nvd3.js libraries into Omni-channel Campaign management SaaS product, wrote REST API's for aggregating statistics from campaigns with Spring and MongoDB</li>
-               <li>Used Jenkins to create a CI / CD pipeline and automated reliable deployments</li>
-               <li>Proposed and managed a Mesos cluster for running applications and data workloads, increasing developer productivity making deployments more resilient and manageable</li>
-               <li>Implemented a resilient pipeline to capture tweets based on keywords related to clients & perform sentiment analysis for a customer 360 data application with help from data scientists, senior developers. Used Kafka, Python, MongoDB running on the Mesos Cluster</li>
-               </ul>
+  position: Software Engineer
+  timeperiod: Jul 2015 - Aug 2016
 
-freelanceexperience:
-- company: KNOLSKAPE.com
-  description: Worked on porting data pipeline from AWS Lambda to Airflow running on GKE to improve the scalability
-- company: MYALLY.ai
-  description: Implemented Data Pipeline using ElasticSearch and Fluentd which helped uncover insights on user behavior, and Frontend modules in the React SPA
-- company: SENSFORTH.ai
-  description: Java Services using Spark MLlib, Jersey to classify incoming emails to customer service and route them to relevant teams for a reputed bank, bringing down time taken for the first response to complaints by 25%
-- company: MELVAULT.com
-  description: Implemented API services and Frontend using JavaScript for a home automation project on a proprietary grid computing platform
 
 education:
-- degree: Master of Science
-  timeperiod: August 2009 - March 2015
-  description: Major in Physics with Honors, BITS Pilani University, India
+- degree: M.Sc Physics, BITS Pilani University
+  location: Goa
+  timeperiod: 2009 - 2015
 
-#skill level goes 0 to 100
-skills:
-- name: Python
-  level: 99
-- name: Druid
-- name: Shell
-- name: MongoDB
-  level: 93
-- name: SQL
-  level: 60
-- name: Spark
-  level: 95
-- name: Docker
-  level: 99
-- name: Streamsets
-  level: 80
-- name: Kafka
-knowledge: 
+recentprojects:
+- tech_stack: Falcon, PostgresQL, Python, PubSub, CloudFunctions, CloudScheduler, Vegeta
+  year: 2019
+  product_name: Paid Search Platform
+  url: https://sphota.biz
+  description: 
+    - d_item: Developed high performance ad trackers for attribution modelling
+    - d_item: Implemented a reporting system for marketeers to gain insights on Ad Spends
+    - d_item: Made changes related to GDPR in internal data platform for a fortune 500 client
+- tech_stack: Airflow, S3, Redshift, Metabase, Python, Pandas, Kafka, React.js, Spring, EC2
+  year: 2018
+  product_name: Niyo Fintech Products
+  url: https://www.goniyo.com
+  description: 
+    - d_item: Created a centralized data warehouse on Redshift to handle txn data related to 0.5 million and growing user base
+    - d_item: Developed BI system on Metabase, created investor dashboards that helped raise a funding of $14 million
+    - d_item: Trained business & tech users in using the BI system, curated access, helping our organisation be data-driven
+    - d_item: Implemented data quality checks, which found massive bugs in partner's APIs that we causing erroneous transactions 
+    - d_item: Automated various reports for invoicing & sharing data with partners using Airflow
+- tech_stack: Python, Druid, Pandas, Flask, S3, Zookeeper, Vue.js
+  year: 2017
+  product_name: Predictive Maintenance Platform
+  url: https://www.ascendo.ai
+  description: 
+    - d_item: Mapped data from various customer sources including CRM, service history, knowledge base etc to a metadata model
+    - d_item: Researched & proposed we use Druid as datastore instead of PostgreSQL, this brought down latency to sub-second from usual timeouts caused by filtering on huge number of dimensions
+    - d_item: Developed services to ingest data to Druid using S3, Pandas
+    - d_item: Designed and implemented APIs for consuming the data from front-end & ML services
 
-projects:
-- name: best-resume-ever
-  platform: Vue
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
-
-hobbies:
-- name: Video Games
-  iconClass: fa fa-gamepad
-  url: https://example.com
-
-- name: Drawing
-  iconClass: fa fa-pencil
-  url: https://example.com
-
-contributions:
-- name: best-resume-ever
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
-  url: https://github.com/salomonelli/best-resume-ever
 
 contact:
-  email: rohithreddyt@yandex.com
+  email: rohith.reddi9@gmail.com
   phone: +91 888 654 0155
   github: rohithreddy
   website: rohithreddy.github.io

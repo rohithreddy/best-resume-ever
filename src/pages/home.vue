@@ -79,6 +79,14 @@
       </router-link>
     </div>
     <div class="preview">
+      <router-link v-bind:to="'/resume/simple-new'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-creative.png" />
+          <span>creative</span>
+        </div>
+      </router-link>
+    </div>
+    <div class="preview">
       <router-link v-bind:to="'/resume/cool'">
         <div class="preview-wrapper">
           <img src="../assets/preview/resume-cool.png" />

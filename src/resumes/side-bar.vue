@@ -4,10 +4,7 @@
           <span class="person-name">
             {{person.name.first}} {{person.name.middle}} {{person.name.last}}
           </span>
-          <span class="person-position">
-            {{person.position}}
-          </span>
-          <div id="info-flex">
+      <div id="info-flex">
                 <span id="email"><a :href='"mailto:" + person.contact.email'>
                   <i class="fa fa-envelope" aria-hidden="true"></i> {{person.contact.email}}</a></span>
                 <span id="phone"><i class='fa fa-phone-square' aria-hidden="true"></i> {{person.contact.phone}}</span>
@@ -30,7 +27,7 @@
               <div class="skills">
                       <div class="skill" v-for="skill in person.skills" :key="skill.name">
                           <span class="skill-name">{{skill.name}}</span>
-                      </div>
+              </div>
               </div>
               <span class="skills-other"> {{person.knowledge}} </span>
           </div>
@@ -108,13 +105,14 @@ export default Vue.component(name, getVueOptions(name));
     span {
       width:100%;
       display:block;
-      text-align:center;
+      text-align:left;
       font-weight:normal;
     }
     span.person-name {
-      text-transform:uppercase;
-      font-size:50px;
-      letter-spacing:10px;
+      font-size:25px;
+      padding-left: 8%;
+
+      // letter-spacing:5px;
     }
     span.person-position {
       letter-spacing:5px;
@@ -122,9 +120,13 @@ export default Vue.component(name, getVueOptions(name));
   }
   .top-row #info-flex {
 
-                display:flex;
-                margin-top:40px;
+                display:inline-table;
+                // margin-top:40px;
                 font-size:12px;
+                text-align: right;
+                position: absolute;
+                right: 8%;
+                top: 3%;
                 a {
         color:black;
       }
@@ -133,6 +135,7 @@ export default Vue.component(name, getVueOptions(name));
                 }
                 i {
                     margin-right:5px;
+                    color: #F57900;
                 }
 
   }
@@ -257,18 +260,18 @@ export default Vue.component(name, getVueOptions(name));
           width:100%;
           margin-top:20px;
         }
-        #info-flex {
-                display:flex;
-                margin-top:20px;
-                font-size:14px;
+        // #info-flex {
+        //         display:flex;
+        //         margin-top:20px;
+        //         font-size:14px;
 
-                span {
-                    margin-right:25px;
-                }
-                i {
-                    margin-right:5px;
-                }
-            }
+        //         span {
+        //             margin-right:25px;
+        //         }
+        //         i {
+        //             margin-right:5px;
+        //         }
+        //     }
       }
     }
   }
