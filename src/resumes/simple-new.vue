@@ -116,8 +116,8 @@ export default Vue.component(name, getVueOptions(name));
 
   .top-row {
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 45px;
+    padding-bottom: 45px;
     text-align: center;
     display: inline-flex;
     align-items: center;
