@@ -25,18 +25,8 @@
           </span>
       </div>
       </div>
-      <div class="education">
-        <h3><span class="section-rec col-2"></span>  <span class="col-4"> {{ lang.education }}  </span></h3>
-                  <div class="education-block big-size" v-for="education in person.education" :key="education.degree">
-                    <div class="row">
-                      <span class="time-period col-2">{{education.timeperiod}}</span>
-                      <span class="col-10"><span class="degree">{{education.degree}}</span>, {{education.location}}</span>
-                    </div>
-                  </div>
-      </div>
-      <br>
       <div class="skills">
-        <h3> <span class="section-rec col-2"></span>  <span class="col-4">Technical Skills</span></h3> 
+        <h3> <span class="section-rec col-2"></span>  <span class="col-4"> Computer Skills</span></h3> 
         <div class="skill-block big-size" v-for="skill in person.computer_skills" :key="skill.type">
           <div class="row">
             <span class="skill-type col-2" > {{skill.type}}: </span>
@@ -45,33 +35,7 @@
         </div>
       </div>
       <br>
-       <div class="experience">
-              <h3><span class="section-rec col-2"></span>  <span class="col-4">  {{ lang.experience }} </span></h3>
-                  <div class="experience-block big-size" v-for="experience in person.experience" :key="experience.company">
-                    <div class="row">
-                      <span class="time-period col-2">{{experience.timeperiod}}</span>
-                      <span class="col-10"> <span class="job-title">{{experience.position}}</span>, {{experience.company}}, {{experience.place}}</span>
-                    </div>
-                    <div class="row">
-                  <span class="techstack col-2">Tech Stack</span>
-                  <span class="techstack col-10"> {{experience.tech_stack}} </span>
-                  </div>
-                  <div class="row">
-            <span class="time-year col-2">Product</span>
-            <span class="col-10"><span class="product-name">{{experience.product_name}}</span> <a :href="experience.url">{{experience.url}}</a> </span>
-          </div>
-           <div class="row">
-            <span class="col-2"></span>
-            <span class="desc col-10">
-              <ul>
-                <li v-for="ditem in experience.description" :key="ditem"> {{ditem.d_item}} </li>
-              </ul>
-            </span>
-          </div>
-                  </div>
-      </div>
-      <br>
-      <!-- <div class="recent_projects">
+      <div class="recent_projects">
         <h3>
           <span class="section-rec col-2"></span>  <span class="col-4">  Recent Projects </span>
         </h3>
@@ -93,7 +57,27 @@
             </span>
           </div>
         </div>
-      </div> -->
+      </div>
+      <br>
+      <div class="experience">
+              <h3><span class="section-rec col-2"></span>  <span class="col-4">  {{ lang.experience }} </span></h3>
+                  <div class="experience-block big-size" v-for="experience in person.experience" :key="experience.company">
+                    <div class="row">
+                      <span class="time-period col-2">{{experience.timeperiod}}</span>
+                      <span class="col-10"> <span class="job-title">{{experience.position}}</span>, {{experience.company}}</span>
+                    </div>
+                  </div>
+      </div>
+      <br>
+      <div class="education">
+        <h3><span class="section-rec col-2"></span>  <span class="col-4"> {{ lang.education }}  </span></h3>
+                  <div class="education-block big-size" v-for="education in person.education" :key="education.degree">
+                    <div class="row">
+                      <span class="time-period col-2">{{education.timeperiod}}</span>
+                      <span class="col-10"><span class="degree">{{education.degree}}</span>, {{education.location}}</span>
+                    </div>
+                  </div>
+      </div>
   </div>
 
 </template>
@@ -132,8 +116,8 @@ export default Vue.component(name, getVueOptions(name));
 
   .top-row {
     width: 100%;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 45px;
+    padding-bottom: 45px;
     text-align: center;
     display: inline-flex;
     align-items: center;
@@ -193,10 +177,7 @@ export default Vue.component(name, getVueOptions(name));
     .row {
       align-items: center;
     .time-period {
-      font-size: 0.8rem;
-    }
-       .product-name {
-      font-weight: 404;
+      font-size: 1em;
     }
     .job-title {
       font-weight: 404;
@@ -225,7 +206,7 @@ export default Vue.component(name, getVueOptions(name));
   }
 
   .big-size {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 }
 
